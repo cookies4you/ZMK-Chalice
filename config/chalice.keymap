@@ -12,19 +12,6 @@
 #include <dt-bindings/zmk/ext_power.h>
 
 / {
-    macros {
-        l_tog: l_tog {
-            label = "ZM_light_toggle";
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings
-                = <&macro_tap &rgb_ug RGB_TOG &ext_power EP_TOG>
-                ;
-        };
-    };
-};
-
-/ {
         chosen { zmk,kscan = &kscan0; zmk,matrix_transform = &splitbs_transform; };
         keymap {
                 compatible = "zmk,keymap";
@@ -43,7 +30,7 @@
                 function_layer {
 
                         bindings = <
-   &bootloader     &l_tog &kp F1           &kp F2          &kp F3          &kp F4       &kp F5       &kp F6       &kp F7       &kp F8       &kp F9       &kp F10      &kp F11      &kp F12      &kp PSCRN       &kp INS 
+   &bootloader     &ext_power EP_TOG    &kp F1           &kp F2          &kp F3          &kp F4       &kp F5       &kp F6       &kp F7       &kp F8       &kp F9       &kp F10      &kp F11      &kp F12      &kp PSCRN       &kp INS 
    &kp HOME          &out OUT_TOG   &bt BT_SEL 0  &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_CLR       &trans       &trans       &trans       &trans       &trans       &trans       &trans       &trans       &trans
    &kp END          &trans &rgb_ug RGB_BRD  &rgb_ug RGB_BRI &rgb_ug RGB_SAD &rgb_ug RGB_SAI       &trans       &trans       &trans       &trans       &trans       &trans       &trans       &reset 
                    &kp CAPS &rgb_ug RGB_EFR  &rgb_ug RGB_EFF &rgb_ug RGB_HUD &rgb_ug RGB_HUI       &trans       &trans       &trans       &trans       &trans       &trans       &trans       &trans       &trans
