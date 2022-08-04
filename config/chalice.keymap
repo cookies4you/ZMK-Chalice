@@ -18,9 +18,10 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
-                = <&macro_tap &rgb_ug RGB_TOG &ext_power EP_OFF>
+                = <&macro_tap &rgb_ug RGB_TOG &ext_power EP_TOG>
                 ;
         };
+    };
 };
 
 / {
